@@ -5,7 +5,11 @@
 
 require_once "functions.php";
 
+// Inform the brower that the page represents JSON Format
+
 header("Content-Type: application/json");
+
+// Check version
 
 if(!isset($_POST["version"]))
 {
@@ -13,7 +17,11 @@ if(!isset($_POST["version"]))
 	die();
 }
 
+// Get version
+
 $version = $_POST["version"];
+
+// Check for updates
 
 if($version == 1.0)
 {
@@ -21,7 +29,11 @@ if($version == 1.0)
 	die();
 }
 
+// Send OTA Update
+
 send_response("403","Latest Version");
 die();
+
+// End of script
 
 ?>
