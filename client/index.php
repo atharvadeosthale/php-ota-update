@@ -6,7 +6,7 @@
 // Require functions file
 require_once "functions.php";
 
-// Set cURL URL
+// Set cURL URL (master server address) and may not be localhost
 $url = "http://localhost/newota/server/";
 
 // set POST data
