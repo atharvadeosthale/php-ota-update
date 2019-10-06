@@ -25,11 +25,12 @@ $version = $_POST["version"];
 
 if($version == 1.0)
 {
+	// Send OTA Update to client
 	send_response("200","http://localhost/newota/server/cdn/v2.zip");
 	die();
 }
 
-// Send OTA Update
+// Latest version
 
 send_response("403","Latest Version");
 die();
